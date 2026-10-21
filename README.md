@@ -1,15 +1,18 @@
 # Crypto Project Deep Research
 
-**Evidence-first crypto research, from protocol fundamentals to token value capture.**
+**Evidence-first crypto project discovery and deep research, from fundamentals to token value capture.**
 
 English · [简体中文](README.zh-CN.md)
 
 A reusable Agent Skill for researching crypto projects, protocols, tokens, blockchains, DeFi, infrastructure, and crypto companies. It guides an agent through source verification, protocol economics, growth quality, supply dilution, valuation, and risk—then evaluates the protocol and token separately.
 
+**Discover** adds a candidate-finding workflow: distinguish rising attention from improving fundamentals and select what to research next. It produces research candidates, not buy recommendations, and does not automatically run full research on the shortlist.
+
 The central question: **What creates value, who pays for it, who captures it, and what could make the thesis wrong?**
 
 ## What it covers
 
+- **Candidate discovery:** recent signals, disclosed data coverage, independent attention/fundamentals assessments, and research prioritization.
 - **Identity verification:** official domains, chains, contracts, versions, migrations, and similarly named assets.
 - **Business fundamentals:** user needs, products, market size, competition, and structural moats.
 - **Economic reality:** fees versus protocol revenue, supply-side revenue, incentives, and organic growth evidence.
@@ -52,16 +55,42 @@ $crypto-project-deep-research Analyze: Aave
 | Deep Dive | `Deep Dive: Ethereum` | Adds implementation evidence, metric provenance, sensitivity analysis, and stronger counter-evidence. |
 | Compare | `Compare: Aave vs Morpho` | Applies the same framework, dates, definitions, and valuation assumptions to each project. |
 | Update | `Update: Aave` | Compares against a dated prior report and reassesses the thesis. Without a baseline, creates current research and discloses that changes cannot be established. |
+| Discover | `Discover: Trending crypto projects in the past 7 days` | Builds a disclosed, source-limited candidate pool, verifies signals, and prioritizes further research. |
 
 Natural-language requests work too. Add an official URL or chain and contract address when the project name is ambiguous.
 
 You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, Chinese output, USD, and a 12-month valuation horizon. For an English report, append `Write the report in English.`
 
+### Discover: find research candidates
+
+```text
+$crypto-project-deep-research Discover: DeFi projects worth researching in the past 30 days
+Discover: Trending crypto projects in the past 7 days
+Discover: Projects with improving fundamentals but relatively low market attention
+```
+
+Optional filters: time window, sector, chain, token-issued/unissued status, circulating market-cap range, excluded projects, candidate count, and output language. Defaults: **past 30 days, all sectors and chains, issued and unissued projects, no market-cap filter or exclusions, 10 candidates, Chinese**. The output discloses the cutoff and actual data coverage; it never claims to scan the entire market.
+
+For a narrower screen, specify the conditions in natural language:
+
+```text
+$crypto-project-deep-research Discover: DeFi projects in the past 7 days.
+Chains: Ethereum and Base. Issued tokens only.
+Circulating market cap: USD 100 million–5 billion. Exclude Aave.
+Return up to 5 research candidates. Write the output in English.
+```
+
+If the evidence supports fewer candidates, the result explains the shortfall. Unissued projects or projects with unknown market cap cannot be assumed to pass a numeric market-cap filter.
+
+Candidates can carry multiple labels: **Attention-driven**, **Fundamentals-improving**, **Catalyst-driven**, and **Potential divergence**. Low attention alone is not undervaluation; a price rally is not investment merit. Growth uses the previous equal-length window and shows absolute scale and change, with checks for low bases, incentives, Sybil activity, wash trading, price effects, and one-off events.
+
+The output includes a candidate table, separate **Attention / Fundamentals / Catalyst / Research Priority / Confidence** assessments, up to three leading research cards, source/data-gap workpapers, and copyable Analyze/Deep Dive prompts. Research Priority is not an investment rating or expected return; missing data stays N/A and may prevent ranking. Cross-sector ordering must be explained. See [the Discover workflow](references/discover.md).
+
 **Language:** the executable instructions and reference documents are currently written in Chinese. These README files are bilingual; the skill instructs the agent to follow the requested report language.
 
 ## Research output
 
-The [report template](references/report-template.md) contains **31 modules**, including:
+For full research, the [report template](references/report-template.md) contains **31 modules**, including:
 
 1. Executive summary, core thesis, product, market, and protocol economics.
 2. Fundamental metrics and growth quality over 30D, 90D, 180D, and 1Y where data exists.
@@ -70,7 +99,7 @@ The [report template](references/report-template.md) contains **31 modules**, in
 5. Relative, historical, and scenario valuation; catalysts; risks; and opposing theses.
 6. An 11-dimension scorecard, answers to 12 concluding questions, separate protocol/token verdicts, confidence, and sources.
 
-Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers**, either in appendices or accompanying Markdown/CSV files. Non-applicable sections are explained rather than filled with invented numbers.
+Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers**, either in appendices or accompanying Markdown/CSV files. Non-applicable sections are explained rather than filled with invented numbers. Discover uses its own concise output rather than the full report or investment verdicts; Analyze, Deep Dive, Compare, and Update retain their existing behavior.
 
 ## Evidence and calculation rules
 
@@ -90,6 +119,7 @@ Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **
 ├── agents/openai.yaml               # Display metadata and default invocation
 ├── references/
 │   ├── evidence.md                  # Sources, timestamps, verification, workpapers
+│   ├── discover.md                  # Candidate discovery, screening, prioritization
 │   ├── analysis-methods.md          # Economics, supply, treasury, valuation formulas
 │   ├── sector-metrics.md            # Metrics tailored to different business models
 │   ├── report-template.md           # Complete 31-module report framework
@@ -102,6 +132,10 @@ Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **
 
 This is an **instruction-based skill**, not a market-data service, trading bot, or standalone executable. Live research requires browsing, public APIs, blockchain explorers, or connectors supplied by the host agent. Paid datasets are optional; inaccessible sources must be disclosed. No wallet signature or transaction is required for the research workflow.
 
+Discover does not trade, create scheduled tasks, or require paid services. Without reliable recent data it discloses the limitation instead of inventing a trending list.
+
 Structure, internal links, metadata, and worked calculation examples have been checked. A complete real-project research run has **not yet been validated**. The installer command is provided for distribution and has not been end-to-end tested in this environment. Research quality depends on source availability and the executing agent; output still requires review.
+
+Discover was exercised on a live 30-day DeFi request on **2026-10-21**, including equal-window recomputation, source limitations, unranked watchlist entries, and exclusion of misleading signals. This bounded screening run does not validate exhaustive coverage or complete project research.
 
 Scores and scenario valuations are research tools, not investment advice, price guarantees, legal opinions, or smart-contract audits.

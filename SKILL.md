@@ -1,6 +1,6 @@
 ---
 name: crypto-project-deep-research
-description: 对加密项目、协议、Token、公链、DeFi、基础设施或 Crypto 公司开展证据驱动的深度尽调、横向比较与研究更新，分析真实使用、协议经济、Token 价值捕获、稀释、估值和风险。适用于 Analyze、Deep Dive、Compare、Update 及中文同义请求。
+description: 对加密项目、协议、Token、公链、DeFi、基础设施或 Crypto 公司开展证据驱动的深度尽调、横向比较、研究更新及近期研究候选发现。适用于 Analyze、Deep Dive、Compare、Update、Discover 及中文同义请求；Discover 区分热度与基本面改善，只筛选研究候选，不给买入建议。
 ---
 
 # Crypto Project Deep Research
@@ -17,6 +17,9 @@ description: 对加密项目、协议、Token、公链、DeFi、基础设施或 
 | `Deep Dive: [PROJECT]` | 完整研究，加深合约实施、原始数据、敏感性与反证分析。 |
 | `Compare: [A] vs [B]` | 每个对象应用同一框架，统一时点、指标与评分口径后比较。 |
 | `Update: [PROJECT]` | 对照有日期的历史报告，核对变化与 Thesis。 |
+| `Discover: [范围/条件]` | 发现近期值得进一步研究的候选；按独立流程筛选，不自动展开完整深研。 |
+
+**Discover 路由**：先读取 [discover.md](references/discover.md)，并遵守第 2 节证据原则；使用该参考文件的参数默认值、候选身份处理、评分、输出和交付检查，不执行第 3–6 节的完整研究、31 模块报告或投资评级流程。其余四种模式继续按原流程执行。Discover 不创建定时任务，不自动交易，不引入强制付费服务。
 
 中文同义请求映射到相应模式，无须命令前缀。开始时说明模式、目标身份与研究截止时间。默认当前时点、USD、12 个月估值期限；用户指定优先。24 个月供给分析与 1–3 年催化剂另列，不混作估值期限。历史研究不得引用截止日之后才公开的信息支持当时判断。
 
@@ -82,6 +85,8 @@ description: 对加密项目、协议、Token、公链、DeFi、基础设施或 
 - 更新评分、双 Verdict、Confidence 与监测清单；未变化模块可引用旧版。没有查到事件不等于没有发生。
 
 ## 6. 交付检查
+
+本节用于 Analyze、Deep Dive、Compare、Update；Discover 使用 [discover.md](references/discover.md) 中的专用检查。
 
 - 身份、链、合约和版本是否确认？
 - 价格、MC、FDV、TVL、收入、供应、解锁、Treasury 是否有时点/期间？
