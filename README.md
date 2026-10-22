@@ -1,14 +1,27 @@
 # Crypto Project Deep Research
 
-**Evidence-first crypto project discovery and deep research, from fundamentals to token value capture.**
+**Discover crypto projects, research their fundamentals, and turn the findings into full Chinese/English reports and bilingual social-media posts.**
 
 English · [简体中文](README.zh-CN.md)
 
 A reusable Agent Skill for researching crypto projects, protocols, tokens, blockchains, DeFi, infrastructure, and crypto companies. It guides an agent through source verification, protocol economics, growth quality, supply dilution, valuation, and risk—then evaluates the protocol and token separately.
 
-**Discover** adds a candidate-finding workflow: distinguish rising attention from improving fundamentals and select what to research next. It produces research candidates, not buy recommendations, and does not automatically run full research on the shortlist.
+**Discover** distinguishes rising attention from improving fundamentals and selects what to research next. It produces research candidates, not buy recommendations, and does not automatically run full research on the shortlist.
 
 The central question: **What creates value, who pays for it, who captures it, and what could make the thesis wrong?**
+
+## What you get
+
+By default, each research run delivers four separate Markdown files:
+
+| File | Deliverable |
+| --- | --- |
+| `report.zh-CN.md` | Complete Chinese research report for the selected mode. |
+| `report.en.md` | Complete English report with the same evidence, scope, and conclusions. |
+| `social-post.zh-CN.md` | Standalone Chinese social-media post built around the key findings. |
+| `social-post.en.md` | English editorial version of the same post, adapted for English readers. |
+
+Reports share an evidence ledger, a discrepancy/data-gap table, and calculation workpapers. Posts retain material risks, assumptions, dates, and direct sources. The default is one general-purpose long-form post per language; specify a platform, length, or thread format when needed. Posts are delivered as drafts and are not published automatically. Explicit requests for one language or only certain deliverables take precedence.
 
 ## What it covers
 
@@ -61,6 +74,13 @@ Natural-language requests work too. Add an official URL or chain and contract ad
 
 You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, USD, and a 12-month valuation horizon. Each run produces separate Chinese and English reports plus a social-media post in each language. Explicit requests for one language, reports only, posts only, or a particular platform/length take precedence.
 
+For example, request platform-specific posts alongside the full bilingual reports:
+
+```text
+$crypto-project-deep-research Analyze: Zama https://www.zama.org/
+Keep both complete reports. Write the Chinese and English social posts as X threads.
+```
+
 ### Discover: find research candidates
 
 ```text
@@ -101,7 +121,7 @@ For full research, the [report template](references/report-template.md) contains
 
 Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers**, either in appendices or accompanying Markdown/CSV files. Non-applicable sections are explained rather than filled with invented numbers. Discover uses its own concise output rather than the full report or investment verdicts; Analyze, Deep Dive, Compare, and Update retain their existing behavior.
 
-Default files are `report.zh-CN.md`, `report.en.md`, `social-post.zh-CN.md`, and `social-post.en.md`, with shared research workpapers. Posts build an independently readable argument from the verified research, retaining material risks, assumptions, dates, and direct sources. They are edited for each language rather than condensed chapter by chapter. No account is posted to automatically. See [bilingual delivery and social editing](references/delivery-and-social.md).
+Both full reports preserve the selected mode's required coverage. Social posts develop a clear argument from that research instead of compressing every chapter; an English summary does not replace the complete English report. See [bilingual delivery and social editing](references/delivery-and-social.md).
 
 ## Evidence and calculation rules
 
@@ -137,7 +157,7 @@ This is an **instruction-based skill**, not a market-data service, trading bot, 
 
 Discover does not trade, create scheduled tasks, or require paid services. Without reliable recent data it discloses the limitation instead of inventing a trending list.
 
-Structure, internal links, metadata, and worked calculation examples have been checked. A complete real-project research run has **not yet been validated**. The installer command is provided for distribution and has not been end-to-end tested in this environment. Research quality depends on source availability and the executing agent; output still requires review.
+Structure, internal links, metadata, and worked calculation examples have been checked. A source-limited Zama Analyze run was completed on **2026-10-22**, covering the 31-module framework, evidence/data-gap workpapers, and conditional supply calculations. It did not establish fully verified live economics or contract state. The new four-file bilingual delivery has **not yet been tested end to end**. The installer command has not been end-to-end tested in this environment. Research quality depends on source availability and the executing agent; output still requires review.
 
 Discover was exercised on a live 30-day DeFi request on **2026-10-21**, including equal-window recomputation, source limitations, unranked watchlist entries, and exclusion of misleading signals. This bounded screening run does not validate exhaustive coverage or complete project research.
 
