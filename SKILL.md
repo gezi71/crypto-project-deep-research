@@ -7,7 +7,7 @@ description: 对加密项目、协议、Token、公链、DeFi、基础设施或 
 
 研究核心：这是什么生意，谁付钱，谁获得价值，增长是否真实，Token 是否必要，当前价格反映了什么，什么证据会推翻判断？
 
-默认中文，保留必要英文术语；跟随用户指定语言。输出独立研究，分别判断 Protocol Quality、Business Quality、Token Quality、Token Valuation。
+默认分别交付中文、英文研究报告，以及中文、英文社交媒体帖文；用户明确指定单一语言或只要某类产物时按其要求。输出独立研究，分别判断 Protocol Quality、Business Quality、Token Quality、Token Valuation。沟通语言跟随用户，不必将过程消息双语重复。
 
 ## 1. 识别任务与范围
 
@@ -19,7 +19,7 @@ description: 对加密项目、协议、Token、公链、DeFi、基础设施或 
 | `Update: [PROJECT]` | 对照有日期的历史报告，核对变化与 Thesis。 |
 | `Discover: [范围/条件]` | 发现近期值得进一步研究的候选；按独立流程筛选，不自动展开完整深研。 |
 
-**Discover 路由**：先读取 [discover.md](references/discover.md)，并遵守第 2 节证据原则；使用该参考文件的参数默认值、候选身份处理、评分、输出和交付检查，不执行第 3–6 节的完整研究、31 模块报告或投资评级流程。其余四种模式继续按原流程执行。Discover 不创建定时任务，不自动交易，不引入强制付费服务。
+**Discover 路由**：先读取 [discover.md](references/discover.md)，并遵守第 2 节证据原则；使用该参考文件的参数默认值、候选身份处理、评分、输出和交付检查，不执行第 3–6 节的完整研究、31 模块报告或投资评级流程。其双语报告与帖文同样遵守 [delivery-and-social.md](references/delivery-and-social.md)。其余四种模式继续按原流程执行。Discover 不创建定时任务，不自动交易，不引入强制付费服务。
 
 中文同义请求映射到相应模式，无须命令前缀。开始时说明模式、目标身份与研究截止时间。默认当前时点、USD、12 个月估值期限；用户指定优先。24 个月供给分析与 1–3 年催化剂另列，不混作估值期限。历史研究不得引用截止日之后才公开的信息支持当时判断。
 
@@ -59,7 +59,9 @@ description: 对加密项目、协议、Token、公链、DeFi、基础设施或 
 
 使用 [scoring.md](references/scoring.md) 给出 11 项评分、Overall Score、独立 Protocol/Token Verdict 和 Confidence。证据不足用 N/A，不用中间分伪装已完成判断。评分仅为研究框架，不代表投资建议。
 
-默认可读 Markdown，不额外创建 Word/PPT/网站。长报告可分文件，摘要链接正文与底稿。用户指定目录优先；已有报告不覆盖，以时间戳创建新版本。
+交付前读取 [delivery-and-social.md](references/delivery-and-social.md)。默认生成四个独立 Markdown 文件：`report.zh-CN.md`、`report.en.md`、`social-post.zh-CN.md`、`social-post.en.md`。两份报告均覆盖当前模式要求的全部内容，帖文另作面向公众的编辑，不以英文摘要替代英文完整报告，不以帖文替代研究。
+
+默认不额外创建 Word/PPT/网站。双语版本共享同一证据台账、差异/缺口表与计算底稿；长报告可按语言分文件，摘要链接所有产物与底稿。用户指定目录优先；已有报告不覆盖，以时间戳创建新版本。只生成可审阅的帖文，不自动发布。
 
 ## 5. 模式差异
 
@@ -96,5 +98,6 @@ description: 对加密项目、协议、Token、公链、DeFi、基础设施或 
 - 当前机制与提案、事实与假设是否区分？缺失值是否误填零？
 - 是否覆盖全部模块、12 个结论问题、评分、双 Verdict、Confidence、完整来源？
 - 是否给出最强反方、证伪条件与可持续跟踪的指标？
+- 默认四份文件是否齐全，中英文事实、计算、评级、Confidence 与关键限制是否一致，帖文是否符合 delivery-and-social.md 的证据和编辑要求？用户指定的交付例外是否已遵守？
 
 无法消除的实质问题先修正或明确限制，不将受限研究包装为充分核验的结论。

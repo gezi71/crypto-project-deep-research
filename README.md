@@ -59,7 +59,7 @@ $crypto-project-deep-research Analyze: Aave
 
 Natural-language requests work too. Add an official URL or chain and contract address when the project name is ambiguous.
 
-You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, Chinese output, USD, and a 12-month valuation horizon. For an English report, append `Write the report in English.`
+You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, USD, and a 12-month valuation horizon. Each run produces separate Chinese and English reports plus a social-media post in each language. Explicit requests for one language, reports only, posts only, or a particular platform/length take precedence.
 
 ### Discover: find research candidates
 
@@ -69,7 +69,7 @@ Discover: Trending crypto projects in the past 7 days
 Discover: Projects with improving fundamentals but relatively low market attention
 ```
 
-Optional filters: time window, sector, chain, token-issued/unissued status, circulating market-cap range, excluded projects, candidate count, and output language. Defaults: **past 30 days, all sectors and chains, issued and unissued projects, no market-cap filter or exclusions, 10 candidates, Chinese**. The output discloses the cutoff and actual data coverage; it never claims to scan the entire market.
+Optional filters: time window, sector, chain, token-issued/unissued status, circulating market-cap range, excluded projects, candidate count, and output language. Defaults: **past 30 days, all sectors and chains, issued and unissued projects, no market-cap filter or exclusions, 10 candidates, separate Chinese and English reports and posts**. The output discloses the cutoff and actual data coverage; it never claims to scan the entire market.
 
 For a narrower screen, specify the conditions in natural language:
 
@@ -86,7 +86,7 @@ Candidates can carry multiple labels: **Attention-driven**, **Fundamentals-impro
 
 The output includes a candidate table, separate **Attention / Fundamentals / Catalyst / Research Priority / Confidence** assessments, up to three leading research cards, source/data-gap workpapers, and copyable Analyze/Deep Dive prompts. Research Priority is not an investment rating or expected return; missing data stays N/A and may prevent ranking. Cross-sector ordering must be explained. See [the Discover workflow](references/discover.md).
 
-**Language:** the executable instructions and reference documents are currently written in Chinese. These README files are bilingual; the skill instructs the agent to follow the requested report language.
+**Language:** the executable instructions and reference documents are written in Chinese. Deliverables default to both Chinese and English; the English report is complete, not an abridged summary. Progress messages follow the user's language.
 
 ## Research output
 
@@ -100,6 +100,8 @@ For full research, the [report template](references/report-template.md) contains
 6. An 11-dimension scorecard, answers to 12 concluding questions, separate protocol/token verdicts, confidence, and sources.
 
 Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers**, either in appendices or accompanying Markdown/CSV files. Non-applicable sections are explained rather than filled with invented numbers. Discover uses its own concise output rather than the full report or investment verdicts; Analyze, Deep Dive, Compare, and Update retain their existing behavior.
+
+Default files are `report.zh-CN.md`, `report.en.md`, `social-post.zh-CN.md`, and `social-post.en.md`, with shared research workpapers. Posts build an independently readable argument from the verified research, retaining material risks, assumptions, dates, and direct sources. They are edited for each language rather than condensed chapter by chapter. No account is posted to automatically. See [bilingual delivery and social editing](references/delivery-and-social.md).
 
 ## Evidence and calculation rules
 
@@ -123,6 +125,7 @@ Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **
 │   ├── analysis-methods.md          # Economics, supply, treasury, valuation formulas
 │   ├── sector-metrics.md            # Metrics tailored to different business models
 │   ├── report-template.md           # Complete 31-module report framework
+│   ├── delivery-and-social.md       # Bilingual reports and social-media posts
 │   └── scoring.md                   # Scorecard, verdicts, confidence
 ├── README.md
 └── README.zh-CN.md

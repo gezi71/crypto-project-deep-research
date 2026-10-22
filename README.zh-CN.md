@@ -59,7 +59,7 @@ $crypto-project-deep-research Analyze: Aave
 
 也支持中文自然语言请求。同名项目或 Token 容易混淆时，请补充官网，或链与合约地址。
 
-可指定研究截止时间、输出语言、估值期限、币种和输出目录。默认当前时点、中文、USD、12 个月估值期限。如需英文报告，附加 `Write the report in English.` 即可。
+可指定研究截止时间、输出语言、估值期限、币种和输出目录。默认当前时点、USD、12 个月估值期限，每次分别交付中文报告、英文报告、中文社交媒体帖文和英文社交媒体帖文。明确指定单一语言、仅报告、仅帖文或特定平台/篇幅时优先遵守。
 
 ### Discover：发现研究候选
 
@@ -69,7 +69,7 @@ Discover: Trending crypto projects in the past 7 days
 Discover: 最近基本面改善但市场关注较低的项目
 ```
 
-可选参数：时间窗口、赛道、链、已发币/未发币、流通市值范围、排除项目、候选数量、输出语言。默认**最近 30 天、全赛道、不限链、已发币与未发币均可、不设市值限制与排除项、10 个候选、中文**。输出注明截止时间与实际数据覆盖，不声称扫描整个市场。
+可选参数：时间窗口、赛道、链、已发币/未发币、流通市值范围、排除项目、候选数量、输出语言。默认**最近 30 天、全赛道、不限链、已发币与未发币均可、不设市值限制与排除项、10 个候选、中英文报告和帖文各一份**。输出注明截止时间与实际数据覆盖，不声称扫描整个市场。
 
 需要缩小范围时，直接用自然语言补充条件：
 
@@ -86,7 +86,7 @@ $crypto-project-deep-research Discover: 最近 7 天值得研究的 DeFi 项目�
 
 产出包括候选表、独立的 **Attention / Fundamentals / Catalyst / Research Priority / Confidence** 评价、最多前三名研究卡片、来源/缺口底稿，以及可复制的 Analyze/Deep Dive 调用。Research Priority 不是预期收益或投资评级；缺数据用 N/A，必要时不排名，跨赛道排序须解释理由。详见 [Discover 执行流程](references/discover.md)。
 
-**语言说明**：可执行指令和参考文件目前为中文；README 提供中英双语，Skill 指示 Agent 跟随用户指定的报告语言。
+**语言说明**：可执行指令和参考文件为中文；交付默认中英双语，英文报告为完整版本而非摘要。过程消息跟随用户语言。
 
 ## 研究产出
 
@@ -100,6 +100,8 @@ $crypto-project-deep-research Discover: 最近 7 天值得研究的 DeFi 项目�
 6. 11 项评分、最终 12 问、协议/Token 独立评级、Confidence 和完整来源。
 
 报告同时提供**证据台账、差异/缺口表、计算底稿**，可作为附录或配套 Markdown/CSV 文件。不适用的部分解释原因，不用虚构数字填表。Discover 使用独立的简洁输出，不强制完整报告或投资评级；Analyze、Deep Dive、Compare、Update 保留原有行为。
+
+默认四个文件为 `report.zh-CN.md`、`report.en.md`、`social-post.zh-CN.md`、`social-post.en.md`，共享研究底稿。帖文从已核验研究提炼一条独立可读的论证，保留关键风险、假设、日期与直接来源；按两种语言分别编辑，不逐章压缩，不自动发布。详见[双语交付与社交媒体编辑](references/delivery-and-social.md)。
 
 ## 证据与计算规则
 
@@ -123,6 +125,7 @@ $crypto-project-deep-research Discover: 最近 7 天值得研究的 DeFi 项目�
 │   ├── analysis-methods.md          # 经济、供应、Treasury 和估值公式
 │   ├── sector-metrics.md            # 按业务类型选择指标
 │   ├── report-template.md           # 完整 31 模块报告框架
+│   ├── delivery-and-social.md       # 双语报告与社交媒体帖文
 │   └── scoring.md                   # 评分、评级和 Confidence
 ├── README.md
 └── README.zh-CN.md
