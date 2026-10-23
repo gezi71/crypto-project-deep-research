@@ -1,6 +1,6 @@
 # Crypto Project Deep Research
 
-**Discover crypto projects, research their fundamentals, and turn the findings into full Chinese/English reports and bilingual social-media posts.**
+**Evidence-first crypto research, written for readers: publishable long-form articles and short posts in Chinese and English.**
 
 English · [简体中文](README.zh-CN.md)
 
@@ -12,16 +12,16 @@ The central question: **What creates value, who pays for it, who captures it, an
 
 ## What you get
 
-By default, each research run delivers four separate Markdown files:
+By default, each research run delivers both long and short versions in both languages, so you can choose what to publish:
 
 | File | Deliverable |
 | --- | --- |
-| `report.zh-CN.md` | Complete Chinese research report for the selected mode. |
-| `report.en.md` | Complete English report with the same evidence, scope, and conclusions. |
-| `social-post.zh-CN.md` | Standalone Chinese social-media post built around the key findings. |
-| `social-post.en.md` | English editorial version of the same post, adapted for English readers. |
+| `article.zh-CN.md` | Publishable Chinese research article with a clear argument and narrative. |
+| `article.en.md` | Full English article with equivalent reasoning, evidence, and counterarguments. |
+| `social-post.zh-CN.md` | Standalone Chinese short post focused on one important finding. |
+| `social-post.en.md` | English short post expressing the same finding and material limits. |
 
-Reports share an evidence ledger, a discrepancy/data-gap table, and calculation workpapers. Posts retain material risks, assumptions, dates, and direct sources. The default is one general-purpose long-form post per language; specify a platform, length, or thread format when needed. Posts are delivered as drafts and are not published automatically. Explicit requests for one language or only certain deliverables take precedence.
+The main articles are written for readers who know some crypto basics and want to understand the project and investment logic. They lead with a worthwhile question, develop evidence and counterarguments, and finish with a clear judgment and what to watch next. The 31-module checklist, scores, verification labels, and detailed tables belong in shared research workpapers. Long articles default to three data charts and short posts to one, where reliable data is available; relevant charts can be reused. Both lengths are generated without asking you to choose first. Explicit language, format, or scope requests take precedence. Nothing is published automatically.
 
 ## What it covers
 
@@ -72,13 +72,13 @@ $crypto-project-deep-research Analyze: Aave
 
 Natural-language requests work too. Add an official URL or chain and contract address when the project name is ambiguous.
 
-You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, USD, and a 12-month valuation horizon. Each run produces separate Chinese and English reports plus a social-media post in each language. Explicit requests for one language, reports only, posts only, or a particular platform/length take precedence.
+You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, USD, and a 12-month valuation horizon. Each run produces Chinese and English long-form articles plus a short post in each language. Explicit requests for one language, a due-diligence report, only one length, or a particular platform take precedence.
 
-For example, request platform-specific posts alongside the full bilingual reports:
+For example, keep both long articles and format the short versions as X threads:
 
 ```text
 $crypto-project-deep-research Analyze: Zama https://www.zama.org/
-Keep both complete reports. Write the Chinese and English social posts as X threads.
+Generate both long articles. Format the Chinese and English short posts as X threads.
 ```
 
 ### Discover: find research candidates
@@ -89,7 +89,7 @@ Discover: Trending crypto projects in the past 7 days
 Discover: Projects with improving fundamentals but relatively low market attention
 ```
 
-Optional filters: time window, sector, chain, token-issued/unissued status, circulating market-cap range, excluded projects, candidate count, and output language. Defaults: **past 30 days, all sectors and chains, issued and unissued projects, no market-cap filter or exclusions, 10 candidates, separate Chinese and English reports and posts**. The output discloses the cutoff and actual data coverage; it never claims to scan the entire market.
+Optional filters: time window, sector, chain, token-issued/unissued status, circulating market-cap range, excluded projects, candidate count, and output language. Defaults: **past 30 days, all sectors and chains, issued and unissued projects, no market-cap filter or exclusions, 10 candidates, Chinese and English long articles and short posts**. The output discloses the cutoff and actual data coverage; it never claims to scan the entire market.
 
 For a narrower screen, specify the conditions in natural language:
 
@@ -106,11 +106,11 @@ Candidates can carry multiple labels: **Attention-driven**, **Fundamentals-impro
 
 The output includes a candidate table, separate **Attention / Fundamentals / Catalyst / Research Priority / Confidence** assessments, up to three leading research cards, source/data-gap workpapers, and copyable Analyze/Deep Dive prompts. Research Priority is not an investment rating or expected return; missing data stays N/A and may prevent ranking. Cross-sector ordering must be explained. See [the Discover workflow](references/discover.md).
 
-**Language:** the executable instructions and reference documents are written in Chinese. Deliverables default to both Chinese and English; the English report is complete, not an abridged summary. Progress messages follow the user's language.
+**Language:** the executable instructions and reference documents are written in Chinese. Deliverables default to both Chinese and English; the English long article has equivalent depth, rather than summarizing the Chinese article. Progress messages follow the user's language.
 
 ## Research output
 
-For full research, the [report template](references/report-template.md) contains **31 modules**, including:
+For full research, the [research workpaper framework](references/report-template.md) contains **31 modules**, including:
 
 1. Executive summary, core thesis, product, market, and protocol economics.
 2. Fundamental metrics and growth quality over 30D, 90D, 180D, and 1Y where data exists.
@@ -119,9 +119,9 @@ For full research, the [report template](references/report-template.md) contains
 5. Relative, historical, and scenario valuation; catalysts; risks; and opposing theses.
 6. An 11-dimension scorecard, answers to 12 concluding questions, separate protocol/token verdicts, confidence, and sources.
 
-Reports include an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers**, either in appendices or accompanying Markdown/CSV files. Non-applicable sections are explained rather than filled with invented numbers. Discover uses its own concise output rather than the full report or investment verdicts; Analyze, Deep Dive, Compare, and Update retain their existing behavior.
+The full framework is completed in `research-notes.md`, with an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers** in accompanying Markdown/CSV files. Missing or non-applicable items are explained there. Discover keeps its own screening framework without full-project verdicts. Public articles are organized around their argument, not these module headings. A conventional module-by-module due-diligence report is available when explicitly requested.
 
-Both full reports preserve the selected mode's required coverage. Social posts develop a clear argument from that research instead of compressing every chapter; an English summary does not replace the complete English report. See [bilingual delivery and social editing](references/delivery-and-social.md).
+Both long articles retain the central argument, decisive evidence, counterarguments, and material uncertainty. Short posts develop one independently readable finding; they do not squeeze every research module into a sentence. Clear writing never upgrades an unverified claim into a fact. See [bilingual long- and short-form writing](references/delivery-and-social.md).
 
 ## Evidence and calculation rules
 
@@ -144,8 +144,8 @@ Both full reports preserve the selected mode's required coverage. Social posts d
 │   ├── discover.md                  # Candidate discovery, screening, prioritization
 │   ├── analysis-methods.md          # Economics, supply, treasury, valuation formulas
 │   ├── sector-metrics.md            # Metrics tailored to different business models
-│   ├── report-template.md           # Complete 31-module report framework
-│   ├── delivery-and-social.md       # Bilingual reports and social-media posts
+│   ├── report-template.md           # Complete 31-module research workpapers
+│   ├── delivery-and-social.md       # Bilingual long articles and short posts
 │   └── scoring.md                   # Scorecard, verdicts, confidence
 ├── README.md
 └── README.zh-CN.md
@@ -157,7 +157,7 @@ This is an **instruction-based skill**, not a market-data service, trading bot, 
 
 Discover does not trade, create scheduled tasks, or require paid services. Without reliable recent data it discloses the limitation instead of inventing a trending list.
 
-Structure, internal links, metadata, and worked calculation examples have been checked. A source-limited Zama Analyze run was completed on **2026-10-22**, covering the 31-module framework, evidence/data-gap workpapers, and conditional supply calculations. It did not establish fully verified live economics or contract state. The new four-file bilingual delivery has **not yet been tested end to end**. The installer command has not been end-to-end tested in this environment. Research quality depends on source availability and the executing agent; output still requires review.
+Structure, internal links, metadata, and worked calculation examples have been checked. A source-limited Zama Analyze run was completed on **2026-10-22**, covering the 31-module framework, evidence/data-gap workpapers, and conditional supply calculations. It did not establish fully verified live economics or contract state. The revised article-first bilingual long/short workflow has **not yet been tested end to end**. The installer command has not been end-to-end tested in this environment. Research quality depends on source availability and the executing agent; output still requires review.
 
 Discover was exercised on a live 30-day DeFi request on **2026-10-21**, including equal-window recomputation, source limitations, unranked watchlist entries, and exclusion of misleading signals. This bounded screening run does not validate exhaustive coverage or complete project research.
 

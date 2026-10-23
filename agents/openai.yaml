@@ -1,4 +1,4 @@
 interface:
   display_name: "Crypto Project Deep Research"
-  short_description: "加密项目研究与候选发现：交叉验证、Token 价值捕获、估值与风险判断"
-  default_prompt: "使用 $crypto-project-deep-research 执行 Analyze: [PROJECT]，完成有来源、有日期的完整研究，默认分别交付中英文报告及中英文社交媒体帖文。"
+  short_description: "加密项目研究与候选发现，生成中英文长短文章，附证据与数据图"
+  default_prompt: "使用 $crypto-project-deep-research 执行 Analyze: [PROJECT]，先做证据驱动研究，再分别生成可发表的中英文长文和短文，并附研究底稿与数据图。"
