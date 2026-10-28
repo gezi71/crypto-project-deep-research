@@ -1,4 +1,4 @@
 interface:
   display_name: "Crypto Project Deep Research"
-  short_description: "加密项目研究与候选发现，生成中英文长短文章，附证据与数据图"
-  default_prompt: "使用 $crypto-project-deep-research 执行 Analyze: [PROJECT]，先做证据驱动研究，再分别生成可发表的中英文长文和短文，并附研究底稿与数据图。"
+  short_description: "加密项目研究与候选发现，默认研究包，按请求生成中英文长短文章"
+  default_prompt: "使用 $crypto-project-deep-research 执行 Analyze: [PROJECT]，完成证据驱动的研究包，以关键变量引导研究、审计模块覆盖，按需配图；仅在明确要求时生成发布文章。"

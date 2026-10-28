@@ -24,11 +24,15 @@
 
 ## Overall Score
 
-默认为适用且证据足够维度的等权均值（保留 1 位小数），披露有效维度数/适用维度数与排除项。此均值包含相关维度，不能解释为成功概率。
+Overall Score 是 optional summary diagnostic、secondary output、non-decisive metric，默认可省略。Overall Score must not substitute for the investment thesis. A decimal overall score should not imply measurement precision that the underlying evidence does not support.
 
-若有 Token，Token Value Capture、Tokenomics、Economics、Valuation 任一缺关键证据，或有效维度少于适用维度的 70%，Overall Score 写 N/A，说明为何不能可靠汇总；仍给有证据分项。未发币公司 Tokenomics/Token Value Capture 不适用；公司估值未知则 Overall Score 也 N/A。
+摘要优先呈现 Protocol Quality、Business Quality、Token Value Capture、Growth Quality、Valuation、Dilution Risk、Governance Risk 与 Confidence 的定性画像，逐维给依据、权衡与限制；无证据写未知/N/A，不从均值反推画像。
 
-双 Verdict 独立判断，不能机械由 Overall Score 映射；强产品不得掩盖无捕获或过度稀释的 Token。
+如保留总分，采用适用且证据足够维度的等权均值，四舍五入为整数 0–10（0.5 向上），标明 rough diagnostic，披露有效维度数/适用维度数与排除项。此均值包含相关且非同质的维度，不能解释为成功概率或线性可加的投资价值。历史小数分支持读取，无须重算或迁移，但不再生成小数总分。
+
+仅在选择输出总分时应用以下门槛：若有 Token，Token Value Capture、Tokenomics、Economics、Valuation 任一缺关键证据，或有效维度少于适用维度的 70%，Overall Score 写 N/A，说明为何不能可靠汇总；仍给有证据分项。未发币公司 Tokenomics/Token Value Capture 不适用；公司估值未知则 Overall Score 也 N/A。
+
+双 Verdict 独立判断，不能机械由 Overall Score 映射；强产品不得掩盖无捕获或过度稀释的 Token。不因高总分自动给 Buy，不因低总分自动给 Avoid，不绕过估值背景。Compare the dimensions, not just the aggregate. 分项分数可辅助比较，但总分不是唯一排名依据；不得把历史 7.2 vs 7.4 等小数差异解释成真实显著优劣。
 
 ## Research Verdict
 

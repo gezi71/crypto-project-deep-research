@@ -1,8 +1,15 @@
 # 完整研究底稿框架（按需用于尽调报告）
 
-在 `research-notes.md` 中按以下框架覆盖全部模块；可结合项目调整篇幅，但不能静默省略。每项重要事实/数据就近附来源、日期/期间与 Fact/Estimate/Interpretation/Assumption。表格是核验工作骨架，填实、写限制，不留空占位。
+31 模块是 coverage and audit framework，不是 mandatory reasoning sequence。先研究核心经济问题、Thesis 关键变量和因果链，再审计覆盖并填补实质缺口。`research-notes.md` 可按项目逻辑组织，不要求 31 个固定章节或编号顺序；以下编号是稳定模块 ID，便于新旧研究映射。覆盖不等于等篇幅，不能静默省略。
 
-默认公开产物为中英文长文和中英文短文，按 [delivery-and-social.md](delivery-and-social.md) 写作；它们无需复制本模板的标题、评分表或逐项 N/A。底稿默认一套，语言跟随用户。只有用户明确要求逐模块尽调报告时，才将本框架用作报告正文；不因公开文章更易读而省略研究步骤。
+保留覆盖矩阵，每个模块 ID 1–31 各一行：
+
+| 模块 ID/名称 | 重要性/覆盖状态 | 实际章节或文件定位 | 主要结论/证据或原因/缺口 |
+| --- | --- | --- | --- |
+
+状态采用 critical（深入）、relevant（标准）、low materiality（简述）、not applicable（N/A 及原因）、data unavailable（缺口及影响）；关键模块缺数据时同时保留其重要性与缺口，不能降为低重要性。矩阵可引用既有 31 节研究包，无须迁移。每项重要事实/数据就近附来源、日期/期间与 Fact/Estimate/Interpretation/Assumption。表格是核验工作骨架，填实、写限制，不留空占位。
+
+默认交付 Research Package：研究笔记、证据台账、计算、数据/来源、差异/缺口、Thesis、Bull/Base/Bear、估值、风险、未解决问题与 Confidence；图表仅按分析需要生成。完成研究不自动生成文章。明确请求发布时才按 [delivery-and-social.md](delivery-and-social.md) 生成所需版本。底稿默认一套，语言跟随用户；明确要求逐模块报告时可按以下编号组织。
 
 ## 报告头部
 
@@ -15,6 +22,8 @@
 简明回答：项目是什么、解决什么问题、为何值得研究、关键数据、最大优势、最大风险、Token 价值捕获、估值水平。
 
 列核心指标快照：Price、MC、FDV及其定义、流通/总/最大供应、适用的使用指标、Revenue、持币人可获得价值、下一重大解锁；逐项标日期。
+
+摘要优先给定性画像：Protocol Quality、Business Quality、Token Value Capture、Growth Quality、Valuation、Dilution Risk、Governance Risk、Confidence，各给依据与限制；可用 Strong/Moderate/Weak、Demanding 或 High/Medium/Low 等适合该维度的表述，无证据写未知/N/A。Overall Score 不是摘要的核心结论。
 
 **Core Thesis**：1–3 句话陈述价值创造、归属、定价与关键依赖。
 
@@ -172,7 +181,7 @@ Variant Perception：市场可能忽略/高估什么、为什么、什么新证�
 
 按 scoring.md 输出 Project Quality、Product、Growth、Economics、Tokenomics、Token Value Capture、Moat、Team、Decentralization、Valuation、Risk 的 0–10 或 N/A，逐项附证据、理由和信心。
 
-给 Overall Score、计算方式/覆盖率，并重申评分为研究框架，不代表投资建议。Risk 高分=更安全，Valuation 高分=价格更有吸引力。
+优先给定性画像。仅在有助于诊断时附可选 Overall Score（整数 0–10 或 N/A）、计算方式/覆盖率，标明 rough diagnostic，不替代 Thesis、估值或双 Verdict；历史小数分仅作为旧记录读取。评分为研究框架，不代表投资建议。Risk 高分=更安全，Valuation 高分=价格更有吸引力。
 
 ## 29. 最终 12 问
 

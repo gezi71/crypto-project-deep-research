@@ -1,6 +1,6 @@
 # Crypto Project Deep Research
 
-**Evidence-first crypto research, written for readers: publishable long-form articles and short posts in Chinese and English.**
+**Crypto research engine first, publishing layer second: stable research discipline, optional articles, charts when useful.**
 
 English · [简体中文](README.zh-CN.md)
 
@@ -12,7 +12,9 @@ The central question: **What creates value, who pays for it, who captures it, an
 
 ## What you get
 
-By default, each research run delivers both long and short versions in both languages, so you can choose what to publish:
+Analyze, Deep Dive, Compare, and Update default to a **Research Package**: research notes, evidence ledger, discrepancy/data-gap table, calculation workpapers, data/source tables, thesis, bull/base/bear analysis, valuation, risks, unresolved questions, and confidence. Research completion does not imply publication generation.
+
+Only an explicit article or publication request activates the publishing layer. These outputs remain available on request:
 
 | File | Deliverable |
 | --- | --- |
@@ -21,7 +23,9 @@ By default, each research run delivers both long and short versions in both lang
 | `social-post.zh-CN.md` | Standalone Chinese short post focused on one important finding. |
 | `social-post.en.md` | English short post expressing the same finding and material limits. |
 
-The main articles are written for readers who know some crypto basics and want to understand the project and investment logic. They lead with a worthwhile question, develop evidence and counterarguments, and finish with a clear judgment and what to watch next. The 31-module checklist, scores, verification labels, and detailed tables belong in shared research workpapers. Long articles default to three data charts and short posts to one, where reliable data is available; relevant charts can be reused. Both lengths are generated without asking you to choose first. Explicit language, format, or scope requests take precedence. Nothing is published automatically.
+Requested articles retain the same writing standards: a worthwhile question, evidence, causal reasoning, counterarguments, judgment, and what to watch next. Generate only the requested languages and formats; a general article request uses the conversation language and long form. Discover retains its existing default bilingual long/short output as a separate mode.
+
+Research and articles may contain zero, one, or several charts. There is no chart quota: use charts only when they materially improve understanding, validation, comparison, or communication. Sources, dates/periods, units, denominators, CSV data, reproducible scripts, and visual checks remain required for generated charts. Nothing is published automatically.
 
 ## What it covers
 
@@ -72,9 +76,9 @@ $crypto-project-deep-research Analyze: Aave
 
 Natural-language requests work too. Add an official URL or chain and contract address when the project name is ambiguous.
 
-You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, USD, and a 12-month valuation horizon. Each run produces Chinese and English long-form articles plus a short post in each language. Explicit requests for one language, a due-diligence report, only one length, or a particular platform take precedence.
+You can specify the research cutoff, output language, valuation horizon, currency, and output directory. Defaults are the current cutoff, USD, and a 12-month valuation horizon. Full research stops at the Research Package unless you explicitly request publishing output. For example, `Analyze: Aave` produces research only; `Analyze: Aave + write an English long-form article` adds only `article.en.md`. Natural language works; no fixed syntax is required. Explicit requests for a due-diligence report or a particular platform take precedence.
 
-For example, keep both long articles and format the short versions as X threads:
+For example, explicitly request both long articles and short versions as X threads:
 
 ```text
 $crypto-project-deep-research Analyze: Zama https://www.zama.org/
@@ -106,7 +110,7 @@ Candidates can carry multiple labels: **Attention-driven**, **Fundamentals-impro
 
 The output includes a candidate table, separate **Attention / Fundamentals / Catalyst / Research Priority / Confidence** assessments, up to three leading research cards, source/data-gap workpapers, and copyable Analyze/Deep Dive prompts. Research Priority is not an investment rating or expected return; missing data stays N/A and may prevent ranking. Cross-sector ordering must be explained. See [the Discover workflow](references/discover.md).
 
-**Language:** the executable instructions and reference documents are written in Chinese. Deliverables default to both Chinese and English; the English long article has equivalent depth, rather than summarizing the Chinese article. Progress messages follow the user's language.
+**Language:** the executable instructions and reference documents are written in Chinese. Research workpapers follow the conversation language. Publication languages and formats follow the request; when both long articles are requested, the English version has equivalent depth rather than summarizing the Chinese version. Discover retains its own bilingual default. Progress messages follow the user's language.
 
 ## Research output
 
@@ -119,9 +123,13 @@ For full research, the [research workpaper framework](references/report-template
 5. Relative, historical, and scenario valuation; catalysts; risks; and opposing theses.
 6. An 11-dimension scorecard, answers to 12 concluding questions, separate protocol/token verdicts, confidence, and sources.
 
-The full framework is completed in `research-notes.md`, with an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers** in accompanying Markdown/CSV files. Missing or non-applicable items are explained there. Discover keeps its own screening framework without full-project verdicts. Public articles are organized around their argument, not these module headings. A conventional module-by-module due-diligence report is available when explicitly requested.
+The 31 modules are a **coverage and audit framework, not a mandatory reasoning sequence**. Identify the core economic question and thesis-critical variables, investigate them and their causal chains, then audit coverage and fill material gaps. Research depth is asymmetric: critical modules receive deep coverage, relevant ones standard coverage, low-materiality ones brief coverage, non-applicable ones explicit N/A with reasons, and unavailable data explicit gaps. Notes may follow the project’s logic rather than 31 fixed sections; a coverage matrix maps every module to its actual location or status.
 
-Both long articles retain the central argument, decisive evidence, counterarguments, and material uncertainty. Short posts develop one independently readable finding; they do not squeeze every research module into a sentence. Clear writing never upgrades an unverified claim into a fact. See [bilingual long- and short-form writing](references/delivery-and-social.md).
+The full framework is covered in `research-notes.md`, with an **evidence ledger**, a **discrepancy/data-gap table**, and **calculation workpapers** in accompanying Markdown/CSV files. Missing or non-applicable items are explained there. Discover keeps its own screening framework without full-project verdicts. Public articles are organized around their argument, not these module headings. A conventional module-by-module due-diligence report is available when explicitly requested.
+
+The 11 integer dimension scores remain diagnostic aids. Summaries prioritize a qualitative profile of protocol/business quality, token value capture, growth, valuation, dilution/governance risk, and confidence. Overall Score is optional, secondary, and rounded to an integer rough diagnostic; existing evidence gates still apply. It cannot substitute for the thesis or valuation, determine Buy/Avoid automatically, or serve as the sole ranking criterion. Compare dimensions rather than small aggregate differences. Old research packages and decimal totals remain readable without migration.
+
+When requested, both long articles retain the central argument, decisive evidence, counterarguments, and material uncertainty. Short posts develop one independently readable finding; they do not squeeze every research module into a sentence. Clear writing never upgrades an unverified claim into a fact. See [bilingual long- and short-form writing](references/delivery-and-social.md).
 
 ## Evidence and calculation rules
 
@@ -146,7 +154,8 @@ Both long articles retain the central argument, decisive evidence, counterargume
 │   ├── sector-metrics.md            # Metrics tailored to different business models
 │   ├── report-template.md           # Complete 31-module research workpapers
 │   ├── delivery-and-social.md       # Bilingual long articles and short posts
-│   └── scoring.md                   # Scorecard, verdicts, confidence
+│   ├── scoring.md                   # Scorecard, verdicts, confidence
+│   └── data-charts.md               # Need-based charts, data and reproducibility
 ├── README.md
 └── README.zh-CN.md
 ```
@@ -157,7 +166,7 @@ This is an **instruction-based skill**, not a market-data service, trading bot, 
 
 Discover does not trade, create scheduled tasks, or require paid services. Without reliable recent data it discloses the limitation instead of inventing a trending list.
 
-Structure, internal links, metadata, and worked calculation examples have been checked. A source-limited Zama Analyze run was completed on **2026-10-22**, covering the 31-module framework, evidence/data-gap workpapers, and conditional supply calculations. It did not establish fully verified live economics or contract state. The revised article-first bilingual long/short workflow has **not yet been tested end to end**. The installer command has not been end-to-end tested in this environment. Research quality depends on source availability and the executing agent; output still requires review.
+Structure, internal links, metadata, and worked calculation examples have been checked. A source-limited Zama Analyze run was completed on **2026-10-22**, covering the 31-module framework, evidence/data-gap workpapers, and conditional supply calculations. It did not establish fully verified live economics or contract state. The Research First workflow has passed structural/link checks and manual instruction walkthroughs, but has **not yet been tested end to end**. There is no existing automated research test suite in this repository. The installer command has not been end-to-end tested in this environment. Research quality depends on source availability and the executing agent; output still requires review.
 
 Discover was exercised on a live 30-day DeFi request on **2026-10-21**, including equal-window recomputation, source limitations, unranked watchlist entries, and exclusion of misleading signals. This bounded screening run does not validate exhaustive coverage or complete project research.
 
