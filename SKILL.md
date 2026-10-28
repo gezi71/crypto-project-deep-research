@@ -19,7 +19,7 @@ Analyze、Deep Dive、Compare、Update 默认交付 Research Package（研究包
 | `Update: [PROJECT]` | 对照有日期的历史报告，核对变化与 Thesis。 |
 | `Discover: [范围/条件]` | 发现近期值得进一步研究的候选；按独立流程筛选，不自动展开完整深研。 |
 
-**Discover 路由**：先读取 [discover.md](references/discover.md)，并遵守第 2 节证据原则；使用该参考文件的参数默认值、候选身份处理、评分、研究底稿和交付检查，不执行第 3–6 节的完整研究、31 模块或投资评级流程。Discover 保留其现有默认双语长短文交付，不适用第 4 节完整研究的默认输出；其文章同样遵守 [delivery-and-social.md](references/delivery-and-social.md)。其余四种模式继续按原流程执行。Discover 不创建定时任务，不自动交易，不引入强制付费服务。
+**Discover 路由**：先读取 [discover.md](references/discover.md)，并遵守第 2 节证据原则；使用该参考文件的参数默认值、候选身份处理、评分、研究底稿和交付检查，不执行第 3–6 节的完整研究、31 模块或投资评级流程。Discover 默认交付 Candidate Shortlist 及核验底稿后停止，不自动展开 Analyze、31 模块研究或生成文章。Discovery is a research prioritization workflow, not a publishing workflow. Discover completion does not imply publication generation. 只有明确请求文章、newsletter、social post 等发布用途时才读取 [delivery-and-social.md](references/delivery-and-social.md)，生成所需版本。其余四种模式继续按原流程执行。Discover 不创建定时任务，不自动交易，不引入强制付费服务。
 
 中文同义请求映射到相应模式，无须命令前缀。开始时说明模式、目标身份与研究截止时间。默认当前时点、USD、12 个月估值期限；用户指定优先。24 个月供给分析与 1–3 年催化剂另列，不混作估值期限。历史研究不得引用截止日之后才公开的信息支持当时判断。
 

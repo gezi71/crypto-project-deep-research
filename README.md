@@ -23,7 +23,7 @@ Only an explicit article or publication request activates the publishing layer. 
 | `social-post.zh-CN.md` | Standalone Chinese short post focused on one important finding. |
 | `social-post.en.md` | English short post expressing the same finding and material limits. |
 
-Requested articles retain the same writing standards: a worthwhile question, evidence, causal reasoning, counterarguments, judgment, and what to watch next. Generate only the requested languages and formats; a general article request uses the conversation language and long form. Discover retains its existing default bilingual long/short output as a separate mode.
+Requested articles retain the same writing standards: a worthwhile question, evidence, causal reasoning, counterarguments, judgment, and what to watch next. Generate only the requested languages and formats; a general article request uses the conversation language and long form. Discover defaults to a Candidate Shortlist and verification workpapers, then stops; publishing also requires an explicit request.
 
 Research and articles may contain zero, one, or several charts. There is no chart quota: use charts only when they materially improve understanding, validation, comparison, or communication. Sources, dates/periods, units, denominators, CSV data, reproducible scripts, and visual checks remain required for generated charts. Nothing is published automatically.
 
@@ -93,7 +93,7 @@ Discover: Trending crypto projects in the past 7 days
 Discover: Projects with improving fundamentals but relatively low market attention
 ```
 
-Optional filters: time window, sector, chain, token-issued/unissued status, circulating market-cap range, excluded projects, candidate count, and output language. Defaults: **past 30 days, all sectors and chains, issued and unissued projects, no market-cap filter or exclusions, 10 candidates, Chinese and English long articles and short posts**. The output discloses the cutoff and actual data coverage; it never claims to scan the entire market.
+Optional filters: time window, sector, chain, token-issued/unissued status, circulating market-cap range, excluded projects, candidate count, and output language. Defaults: **past 30 days, all sectors and chains, issued and unissued projects, no market-cap filter or exclusions, and a Candidate Shortlist in the conversation language**. There is no fixed candidate count; user-specified counts are upper limits. The output discloses the cutoff and actual data coverage; it never claims to scan the entire market.
 
 For a narrower screen, specify the conditions in natural language:
 
@@ -104,13 +104,17 @@ Circulating market cap: USD 100 million–5 billion. Exclude Aave.
 Return up to 5 research candidates. Write the output in English.
 ```
 
-If the evidence supports fewer candidates, the result explains the shortfall. Unissued projects or projects with unknown market cap cannot be assumed to pass a numeric market-cap filter.
+Fewer credible candidates are better than a full list padded with weak ideas. If only three qualify under an upper limit of five, return three. Zero qualified candidates is valid: state “no sufficiently strong candidates” and explain the checked scope and exclusions. Unissued projects or projects with unknown market cap cannot be assumed to pass a numeric market-cap filter.
 
 Candidates can carry multiple labels: **Attention-driven**, **Fundamentals-improving**, **Catalyst-driven**, and **Potential divergence**. Low attention alone is not undervaluation; a price rally is not investment merit. Growth uses the previous equal-length window and shows absolute scale and change, with checks for low bases, incentives, Sybil activity, wash trading, price effects, and one-off events.
 
-The output includes a candidate table, separate **Attention / Fundamentals / Catalyst / Research Priority / Confidence** assessments, up to three leading research cards, source/data-gap workpapers, and copyable Analyze/Deep Dive prompts. Research Priority is not an investment rating or expected return; missing data stays N/A and may prevent ranking. Cross-sector ordering must be explained. See [the Discover workflow](references/discover.md).
+Discovery is a research prioritization workflow, not a publishing workflow. Each candidate includes project/sector, a dated Why Now and concrete evidence, fundamental signal, token/value-capture relevance, main uncertainty, key research question, priority, confidence, and recommended next action. Tables, cards, or prose are all acceptable. “Popular,” price gains, narrative strength, and social attention are leads rather than sufficient fundamental evidence.
 
-**Language:** the executable instructions and reference documents are written in Chinese. Research workpapers follow the conversation language. Publication languages and formats follow the request; when both long articles are requested, the English version has equivalent depth rather than summarizing the Chinese version. Discover retains its own bilingual default. Progress messages follow the user's language.
+The output includes a candidate shortlist, separate **Attention / Fundamentals / Catalyst / Research Priority / Confidence** assessments, up to three leading research cards, source/data-gap workpapers, and copyable Analyze/Deep Dive prompts. Research Priority means “worth investigating next,” not “expected investment return.” It is not an investment rating; missing data stays N/A and may prevent ranking. Cross-sector ordering must be explained. Discover asks what deserves deeper research; Analyze builds the full research and investment thesis. Discovery-level checks do not establish Buy/Sell/Avoid, undervaluation, overvaluation, or a clear winner. Next actions can be Research, Watch, Low Priority, or Drop, with reasons and unresolved questions; no Analyze is executed automatically.
+
+Discover completion does not imply publication generation. Publishing after Discover is optional and request-driven: `Discover DeFi projects + write an English article` first completes the shortlist, then adds only `article.en.md`. Charts are unnecessary by default and appear only when they materially help candidate comparison or judgment; there is no mandatory count. See [the Discover workflow](references/discover.md).
+
+**Language:** the executable instructions and reference documents are written in Chinese. Research workpapers follow the conversation language. Publication languages and formats follow the request; when both long articles are requested, the English version has equivalent depth rather than summarizing the Chinese version. Discover shortlists also follow the conversation language unless otherwise requested. Progress messages follow the user's language.
 
 ## Research output
 
